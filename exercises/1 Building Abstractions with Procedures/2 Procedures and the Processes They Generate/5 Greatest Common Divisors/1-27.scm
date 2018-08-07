@@ -1,5 +1,4 @@
 #lang sicp
-(#%require (lib "27.ss" "srfi"))
 
 ;; Demonstrate that the Carmichael numbers listed in footnote 47 really do fool 
 ;; the Fermat test. That is, write a procedure that takes an integer n and tests 

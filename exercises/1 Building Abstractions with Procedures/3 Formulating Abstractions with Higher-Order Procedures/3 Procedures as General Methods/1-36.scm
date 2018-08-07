@@ -8,8 +8,8 @@
 ;; (Note that you cannot start fixed-point with a guess of 1, as this would cause division 
 ;; by log(1) = 0.)
 
-(define tolerance 0.00001)
 (define (fixed-point f first-guess)
+    (define tolerance 0.00001)
     (define (close-enough? v1 v2)
         (< (abs (- v1 v2)) tolerance))
     (define (try guess)

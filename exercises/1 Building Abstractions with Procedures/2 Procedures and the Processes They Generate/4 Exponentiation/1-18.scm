@@ -1,7 +1,7 @@
 #lang sicp
 
-;; Using the results of exercises 1.16 and 1.17, devise a procedure that generates an iterative 
-;; process for multiplying two integers in terms of adding, doubling, 
+;; Using the results of exercises 1.16 and 1.17, devise a procedure that generates an iterative
+;; process for multiplying two integers in terms of adding, doubling,
 ;; and halving and uses a logarithmic number of steps.
 
 
@@ -13,13 +13,13 @@
 (define (mult-iter a counter product)
     (cond   ((= counter 0)      product)
             ((< a counter)      (mult-iter  a
-                                            (- counter a) 
+                                            (- counter a)
                                             (+ product (square a))))
-            ((even? counter)    (mult-iter  (double a) 
-                                            (halve counter) 
+            ((even? counter)    (mult-iter  (double a)
+                                            (halve counter)
                                             product))
-            (else               (mult-iter  (double a) 
-                                            (halve (- counter 1)) 
+            (else               (mult-iter  (double a)
+                                            (halve (- counter 1))
                                             (+ product a)))))
 
 (define (even? n)
