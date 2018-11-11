@@ -1,4 +1,4 @@
-#lang racket
+#lang sicp
 
 (define (even? n) (= (remainder n 2) 0))
 
@@ -23,4 +23,4 @@
 
 (define (average x y) (/ (+ x y) 2))
 
-(provide (all-defined-out))
+(#%provide (all-defined))

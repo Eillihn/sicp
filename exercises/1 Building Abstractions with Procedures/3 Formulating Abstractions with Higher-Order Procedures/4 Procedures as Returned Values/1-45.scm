@@ -1,7 +1,7 @@
 #lang sicp
 (#%require "../../../helpers/base.scm")
-(#%require "../../../helpers/repeated.scm")
-(#%require "../../../helpers/fixed-point.scm")
+(#%require "../../helpers/repeated.scm")
+(#%require "../../helpers/fixed-point.scm")
 
 ;; We saw in section 1.3.3 that attempting to compute square roots by naively finding a 
 ;; fixed point of y -> x/y does not converge, and that this can be fixed by average 

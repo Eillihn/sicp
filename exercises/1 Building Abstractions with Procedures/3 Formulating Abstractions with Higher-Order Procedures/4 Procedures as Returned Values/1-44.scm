@@ -1,6 +1,6 @@
 #lang sicp
 (#%require "../../../helpers/base.scm")
-(#%require "../../../helpers/repeated.scm")
+(#%require "../../helpers/repeated.scm")
 
 ;; The idea of smoothing a function is an important concept in signal processing. 
 ;; If f is a function and dx is some small number, then the smoothed version of f 

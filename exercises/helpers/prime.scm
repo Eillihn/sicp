@@ -1,5 +1,5 @@
-#lang racket
-(require "base.scm")
+#lang sicp
+(#%require "base.scm")
 
 (define (smallest-divisor n)
     (find-divisor n 2))
@@ -12,4 +12,4 @@
 (define (prime? n)
     (= n (smallest-divisor n)))
 
-(provide (all-defined-out))
+(#%provide (all-defined))

@@ -1,6 +1,6 @@
 #lang sicp
 (#%require "../../../helpers/base.scm")
-(#%require "../../../helpers/fixed-point.scm")
+(#%require "../../helpers/fixed-point.scm")
 
 ;; Define a procedure cubic that can be used together with the newtons-method
 ;; procedure in expressions of the form

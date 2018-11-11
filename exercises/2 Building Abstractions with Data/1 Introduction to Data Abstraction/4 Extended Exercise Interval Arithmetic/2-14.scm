@@ -1,5 +1,5 @@
 #lang sicp
-(#%require "../../../helpers/interval.scm")
+(#%require "../../helpers/interval.scm")
 
 ;; After considerable work, Alyssa P. Hacker delivers her finished system. Several years
 ;; later, after she has forgotten all about it, she gets a frenzied call from an irate 

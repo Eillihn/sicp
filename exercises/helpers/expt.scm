@@ -1,5 +1,5 @@
-#lang racket
-(require "base.scm")
+#lang sicp
+(#%require "base.scm")
 
 (define (expt b n)
     (define (expt-iter b counter product)
@@ -9,4 +9,4 @@
     (expt-iter b n 1))
 
 
-(provide (all-defined-out))
+(#%provide (all-defined))

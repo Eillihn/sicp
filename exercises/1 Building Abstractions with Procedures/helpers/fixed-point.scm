@@ -1,5 +1,5 @@
-#lang racket
-(require "base.scm")
+#lang sicp
+(#%require "../../helpers/base.scm")
 
 (define (fixed-point f first-guess)
     (define tolerance 0.00001)
@@ -13,4 +13,4 @@
     (try first-guess))
 
 
-(provide (all-defined-out))
+(#%provide (all-defined))

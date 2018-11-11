@@ -1,4 +1,4 @@
-#lang racket
+#lang sicp
 
 (define (make-interval a b) (cons a b))
 (define (upper-bound interval) (max (car interval) (cdr interval))) 
@@ -43,4 +43,4 @@
                     (+ (upper-bound x) (upper-bound y))))
 
 
-(provide (all-defined-out))
+(#%provide (all-defined))

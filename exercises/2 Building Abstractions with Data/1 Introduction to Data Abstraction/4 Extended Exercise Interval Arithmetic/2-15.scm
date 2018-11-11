@@ -1,5 +1,5 @@
 #lang sicp
-(#%require "../../../helpers/interval.scm")
+(#%require "../../helpers/interval.scm")
 
 ;; Eva Lu Ator, another user, has also noticed the different intervals computed by 
 ;; different but algebraically equivalent expressions. She says that a formula to 

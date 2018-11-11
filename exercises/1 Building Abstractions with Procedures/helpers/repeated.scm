@@ -1,5 +1,5 @@
-#lang racket
-(require "base.scm")
+#lang sicp
+(#%require "../../helpers/base.scm")
 
 (define (compose f g)
     (lambda (x)
@@ -12,4 +12,4 @@
             (iter (inc a) (compose f result))))
     (iter 2 f))
 
-(provide (all-defined-out))
+(#%provide (all-defined))
