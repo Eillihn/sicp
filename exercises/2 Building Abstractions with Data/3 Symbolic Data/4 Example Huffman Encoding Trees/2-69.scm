@@ -1,6 +1,5 @@
 #lang sicp
 (#%require "../../helpers/huffman-encoding-trees.scm")
-(#%require "../../helpers/set.scm")
 
 ;; The following procedure takes as its argument a list of symbol-frequency 
 ;; pairs (where no symbol appears in more than one pair) and generates a 
@@ -20,20 +19,18 @@
 ;; ordered set representation.)
 
 (define (successive-merge set)
-    (let    ((left (car set))
-            (right (cdr set)))
-        (if (null? right)
-            left
-            (make-code-tree left (successive-merge right)))))
+    (if (null? (cdr set))
+        (car set)
+        (successive-merge (adjoin-set (make-code-tree (car set) (cadr set)) (cddr set)))))
 
 (define (generate-huffman-tree pairs)
     (successive-merge (make-leaf-set pairs)))
 
-
+    
 
 ;; Test code:
 
-(define pairs (list (list 'A 4) (list 'B 2) (list 'D 1) (list 'C 1)))
+(define pairs (list (list 'A 4) (list 'B 2) (list 'C 1) (list 'D 1)))
 (define sample-tree (generate-huffman-tree pairs))
 (define sample-message '(0 1 1 0 0 1 0 1 0 1 1 1 0))
 

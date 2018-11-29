@@ -1,6 +1,6 @@
 #lang sicp
 (#%require "../../helpers/huffman-encoding-trees.scm")
-(#%require "../../helpers/set.scm")
+(#%require (all-except "../../helpers/set.scm" adjoin-set))
 
 ;; The encode procedure takes as arguments a message and a tree and produces the 
 ;; list of bits that gives the encoded message.

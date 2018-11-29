@@ -10,7 +10,11 @@
             ((null? set2) set1)
             (else (union-set (cdr set1) (cons (car set1) set2)))))
 
-(define (adjoin-set x set) (cons x set))
+(define (adjoin-set x set)
+  (cond ((null? set) (list x))
+        ((= x (car set)) set)
+        ((< x (car set)) (cons x set))
+        (else (cons (car set) (adjoin-set x (cdr set))))))
 
 (define (remove-element-of-set x set)
     (define (iter x set result)
