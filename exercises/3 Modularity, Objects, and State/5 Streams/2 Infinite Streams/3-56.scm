@@ -1,9 +1,6 @@
 #lang sicp
 (#%require "../../../helpers/stream.scm")
 
-(define (scale-stream stream factor)
-    (stream-map (lambda (x) (* x factor)) stream))
-
 ; A famous problem, first raised by R. Hamming, is to enumerate, in ascending order with no
 ; repetitions, all positive integers with no prime factors other than 2, 3, or 5. One obvious way to do this is to
 ; simply test each integer in turn to see whether it has any factors other than 2, 3, and 5. But this is very

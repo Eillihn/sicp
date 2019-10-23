@@ -67,6 +67,18 @@
             (apply  stream-map
                     (cons proc (map stream-cdr argstreams))))))
 
-                    
+(define (add-streams s1 s2)
+    (stream-map + s1 s2))
+(define integers (cons-stream 1 (add-streams ones integers)))
+(define ones (cons-stream 1 ones))
 
+(define (interleave s1 s2)
+    (if (stream-null? s1)
+        s2
+        (cons-stream (stream-car s1)
+                    (interleave s2 (stream-cdr s1)))))
+                    
+(define (scale-stream stream factor)
+    (stream-map (lambda (x) (* x factor)) stream))
+    
 (#%provide (all-defined))
